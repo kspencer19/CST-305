@@ -4,7 +4,7 @@ This file will detail how to install required software/libraries and run the ODE
 
 Here's a list:
 
-...Download and install Python 2.7x and 3.x (the latest in each)
+*Download and install Python 2.7x and 3.x (the latest in each)
 
 *Download and install PyCharm
 
