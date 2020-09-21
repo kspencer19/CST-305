@@ -1,0 +1,32 @@
+# Import the required modules
+import numpy as np #imports numpy which is a base package
+from scipy.integrate import odeint #imports odeint funtion  so we dont have type scipy.intergrate.odeint
+import matplotlib.pyplot as plt #import pyplot for plotting and graphing
+
+# model function that returns dy/dt
+def model(x,t,k): #needs three inputer variables
+    dxdt = k * t #differential equation variable
+    return dxdt   #returns variable
+
+#initial condition
+x0 = 30
+
+#time points
+t = np.linspace(0,120,100) #time input points from 0-20 (start,end, number of points)
+
+#solve ODE that accepts multiple value of k
+k = .001                            #set K constant to 10 percent
+x1 = odeint(model,x0,t,args=(k,))  #x1 variable that uses the odeint function from scipy
+k = .0025                           #set K constant to 25 percent
+x2 = odeint(model,x0,t,args=(k,))  #x2 variable that uses the odeint function from scipy
+k = .0045                           #set K constant to 45 percent
+x3 = odeint(model,x0,t,args=(k,))  #x2 variable that uses the odeint function from scipy
+
+#plot results
+plt.plot(t,x1,'r:',linewidth=5,label='k=10%')   #plots x1
+plt.plot(t,x2,'b--',linewidth=5,label='k=25%')   #plots x2
+plt.plot(t,x3,'g-',linewidth=5,label='k=45%')   #plots x3
+plt.xlabel('Time (Mins)') #labels the x axis
+plt.ylabel('Temperature (C)') #labels the y axis
+plt.legend(loc='best') #creates the legend in the best location
+plt.show() #show plot
