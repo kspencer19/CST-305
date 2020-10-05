@@ -1,4 +1,4 @@
-# Project 1
+# Project 2
 
 This file will detail how to install required software/libraries and run the ODE program
 
@@ -10,4 +10,4 @@ Here's a list:
 
 *Install the following packages in PyCharm console: NumPy, SciPy, and matplotlib code to install libraries (“pip install numpy”,“pip install scipy”, “pip install matplotlib”)
 
-Open file and run program
+Open file, input ODE function and initial conditions x0, y0, and h value. Then run the program. 
